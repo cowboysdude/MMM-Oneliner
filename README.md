@@ -8,7 +8,7 @@ git clone https://github.com/cowboysdude/MMM-Oneliner
 
 cd MMM-Oneliner and run NPM INSTALL
 
- #CONFIG.JS
+ # CONFIG.JS
  
        {
 		  	module: 'MMM-Oneliner',
