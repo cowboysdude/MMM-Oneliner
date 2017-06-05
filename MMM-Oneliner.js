@@ -8,7 +8,7 @@
      defaults: {
          updateInterval: 12 * 60 * 1000, // every 12 hours
          useHeader: true,
-         maxWidth: "20%"
+         maxWidth: "300px",
      },
 
      getStyles: function() {
@@ -32,7 +32,7 @@
 
          if (this.config.useHeader != false) {
              var header = document.createElement("header");
-             header.classList.add("xsmall", "dimmed", "header");
+             header.classList.add("xsmall", "dimmed");
              header.innerHTML = "Your Daily One-Liner";
              wrapper.appendChild(header);
          }
