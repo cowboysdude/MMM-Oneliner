@@ -6,6 +6,7 @@
   */
  Module.register("MMM-Oneliner", {
      defaults: {
+	updateInterval: 12 * 60 * 1000, // every 12 hours
         useHeader: true,
         maxWidth: "20%"        
     },
