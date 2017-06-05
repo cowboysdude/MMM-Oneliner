@@ -69,12 +69,4 @@
         }
         this.updateDom(this.config.initialLoadDelay);
     },
-
-
-
-
-
-
-
-
  });
