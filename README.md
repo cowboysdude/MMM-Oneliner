@@ -19,3 +19,10 @@ cd MMM-Oneliner and run NPM INSTALL
 				tag: "people"
 			  }
 		    },
+		    
+ # Useable Tags
+          'people'
+	  'stupid'
+	   'sex'
+	
+You can try other words but if you get no return then there's no one liner for it.   
