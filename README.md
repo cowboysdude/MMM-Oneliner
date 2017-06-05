@@ -15,7 +15,7 @@ cd MMM-Oneliner and run NPM INSTALL
 		  	position: 'top_left',
 		  	config: {
 				useHeader: true,
-				maxWidth: "200px;",
+				maxWidth: "200px",
 				tag: "people"
 			  }
 		    },
