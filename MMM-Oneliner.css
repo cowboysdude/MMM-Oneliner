@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Bubbler+One');
+
 .MMM-Oneliner .wrapper {
+	font-family: 'Bubbler One', sans-serif;
 	font-style: italic;
-	color: #f7940d;
+	color: #fef5eb;
 }
