@@ -1,9 +1,9 @@
 /* Magic Mirror
- * Module: MMM-Oneliner
- *
- * By Cowboysdude
- * MIT Licensed.
- */
+    * Module: MMM-Oneliner
+    *
+    * By Cowboysdude
+    * MIT Licensed.
+    */
 const NodeHelper = require('node_helper');
 var oneLinerJoke = require('one-liner-joke');
 const fs = require('fs');
@@ -22,19 +22,19 @@ module.exports = NodeHelper.create({
             if (temp.timestamp === this.getDate()) {
                 this.joke = temp;
             }
-
+            
         }
         console.log("Starting module: " + this.name);
     },
-
+    
     getJoke: function() {
-        var getRandomJokeWithTag = oneLinerJoke.getRandomJokeWithTag(this.config.tag);
-        this.sendSocketNotification('JOKE_RESULT', getRandomJokeWithTag);
-        this.joke.timestamp = this.getDate();
-        this.joke.data = getRandomJokeWithTag;
-        this.fileWrite();
+          var getRandomJokeWithTag = oneLinerJoke.getRandomJokeWithTag(this.config.tag);
+    this.sendSocketNotification('JOKE_RESULT', getRandomJokeWithTag);
+    this.joke.timestamp = this.getDate();
+    this.joke.data = getRandomJokeWithTag; 
+    this.fileWrite();
     },
-
+    
     fileWrite: function() {
         fs.writeFile(this.path, JSON.stringify(this.joke), function(err) {
             if (err) {
@@ -43,15 +43,15 @@ module.exports = NodeHelper.create({
             console.log("The Joke file was saved!");
         });
     },
-
+    
     getDate: function() {
         return (new Date()).toLocaleDateString();
     },
-
+    
     socketNotificationReceived: function(notification, payload) {
-        if (notification === "CONFIG") {
+    	 if (notification === "CONFIG") {
             this.config = payload;
-        }
+			}
         if (notification === 'GET_JOKE') {
             if (this.joke.timestamp === this.getDate() && this.joke.data !== null) {
                 this.sendSocketNotification('JOKE_RESULT', this.joke.data);
@@ -60,5 +60,5 @@ module.exports = NodeHelper.create({
             }
         }
     }
-
+    
 });
