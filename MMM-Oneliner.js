@@ -8,7 +8,8 @@
      defaults: {
          updateInterval: 12 * 60 * 1000, // every 12 hours
          useHeader: true,
-         maxWidth: "300px",
+         maxWidth: "450px",
+         tag: 'stupid'
      },
 
      getStyles: function() {
@@ -32,13 +33,13 @@
 
          if (this.config.useHeader != false) {
              var header = document.createElement("header");
-             header.classList.add("xsmall", "dimmed");
+             header.classList.add("xsmall", "dimmed", "header");
              header.innerHTML = "Your Daily One-Liner";
              wrapper.appendChild(header);
          }
 
          var jokeList = document.createElement("div");
-         jokeList.classList.add("wrapper", "xsmall");
+         jokeList.classList.add("wrapper", "small");
          jokeList.innerHTML = joke;
          wrapper.appendChild(jokeList);
 
